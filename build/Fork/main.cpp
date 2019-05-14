@@ -16,9 +16,9 @@ int main()
 	}
 	else if (pid > 0)
 	{
+		printf("-------------------");
 		printf("父进程运行,子进程pid = %d, pid = %d,ppid = %d\n", pid, getpid(), getppid());
 	}
 	printf("End...\n");
-	system("pause");
     return 0;
 }
