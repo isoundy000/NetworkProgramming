@@ -1,3 +1,12 @@
-1.修改vim配置 vi vimrc  https://www.cnblogs.com/20170722-kong/p/8046843.html
-2.安装各种插件
-3.安装XShell
+1.安装XShell
+2.根据文档ubuntu下相关软件安装和设置安装
+遇到问题：1.Failed to connect to github.com port 443: 拒绝连接
+将克隆命令改为 ：git clone https://python:chuanzhi@github.com/vim/vim.git
+2.路径错误，升级了vim版本从8.0到8.1就找不到文件夹了
+删除时输入
+sudo apt-get remove vim
+sudo apt-get remove vim-runtime
+sudo apt-get remove vim -tiny
+sudo apt-get remove vim-common
+sudo apt-get remove vim-doc
+sudo apt-get remove vim-scripts
