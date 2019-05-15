@@ -27,6 +27,7 @@ vi test.cpp 报ycm的错，是需要用python安装一下
 
 ==================================================================================
 最简单的办法：删除现有的vim，直接安装vimplus
+地址：https://blog.csdn.net/freeking101/article/details/62037015/
 删除时输入
 sudo apt-get remove vim
 sudo apt-get remove vim-runtime
@@ -36,3 +37,14 @@ sudo apt-get remove vim-doc
 sudo apt-get remove vim-scripts
 我日，弄了半天最后直接导入别人的就好了
 https://github.com/chxuan/vimplus
+
+注！！！！！安装完后，会报on_timer错误
+进入vimplus重新 ./install.sh然后bash下的vim会被删掉，这个时候在
+4.	设置vim作为默认的文本编辑器
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 1
+sudo update-alternatives --set editor /usr/bin/vim
+sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
+sudo update-alternatives --set vi /usr/bin/vim
+完成
+报错/home/python/.LfCache/tempMru没有权限
+方法 sudo rm .LfCache -rf直接删掉
