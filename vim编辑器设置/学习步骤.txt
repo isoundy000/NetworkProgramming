@@ -1,7 +1,7 @@
 1.安装XShell
 2.根据文档ubuntu下相关软件安装和设置安装
 遇到问题：1.Failed to connect to github.com port 443: 拒绝连接
-将克隆命令改为 ：git clone https://python:chuanzhi@github.com/vim/vim.git
+将克隆命令改为 ：git clone git://github.com/vim/vim.git
 2.路径错误，升级了vim版本从8.0到8.1就找不到文件夹了
 删除时输入
 sudo apt-get remove vim
@@ -10,3 +10,29 @@ sudo apt-get remove vim -tiny
 sudo apt-get remove vim-common
 sudo apt-get remove vim-doc
 sudo apt-get remove vim-scripts
+3.E: 无法获得锁 /var/lib/dpkg/lock - open (11: 资源暂时不可用)
+E: 无法锁定管理目录(/var/lib/dpkg/)，是否有其他进程正占用它？
+VM切断的电源导致资源一直被占用未被释放
+执行命令：
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+
+3. ~/.vim是vim配置路径，下面放插件的  ~/vim是clone下的vim
+安装方法一
+vi test.cpp 报ycm的错，是需要用python安装一下
+在 ~/.vim/bundle/YouCompleteMe
+执行sudo /usr/bin/python install.py
+安装方法二
+用clone安装YouCompleteMe，安装的过程中出现443，用同样的方法，将克隆命令改为 ：git clone git://github.com/vim/vim.git，也有可能是网卡了
+
+==================================================================================
+最简单的办法：删除现有的vim，直接安装vimplus
+删除时输入
+sudo apt-get remove vim
+sudo apt-get remove vim-runtime
+sudo apt-get remove vim -tiny
+sudo apt-get remove vim-common
+sudo apt-get remove vim-doc
+sudo apt-get remove vim-scripts
+我日，弄了半天最后直接导入别人的就好了
+https://github.com/chxuan/vimplus
