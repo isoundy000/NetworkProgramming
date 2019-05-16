@@ -71,9 +71,9 @@ int main()
         {
             printf("recv buf: %s", buf);
             //回复消息
-            const char* buff = "这是返还给你的";
-            printf("send buf : %s\n", buff);
-            write(cfd, buff, len);
+            const char * sendbuf = "赶紧滚.....";
+            printf("send buf : %s\n", buf);
+            write(cfd, sendbuf, strlen(sendbuf));
         }
     }   
     close(lfd);
