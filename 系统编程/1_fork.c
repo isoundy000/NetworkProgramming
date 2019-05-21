@@ -14,6 +14,7 @@ int main()
     }else if(pid == 0)
     {
         printf("子进程运行中...pid = %d, ppid = %d\n", getpid(), getppid());
+        :
     }else if(pid > 0)
     {
         printf("父进程运行中... childpid = %d , pid = %d, ppid = %d\n", pid, getpid(), getppid());
