@@ -1,0 +1,1 @@
+g++ -o "/home/python/projects/Fork/bin/x64/Debug/Fork.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/python/projects/Fork/obj/x64/Debug/main.o
